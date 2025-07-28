@@ -5,11 +5,15 @@ This repo holds my Cypress tests for the Politics section of [TVO Today](https:/
 
 ## Getting Started
 **1.Clone the repo and install dependencies**
+
    git clone https://github.com/cs-surya/TvoPoliticsTest.git
+   
    cd TvoPoliticsTest
+   
    npm install
 
 **2.Run the tests**
+
 npx cypress run
 
 Test Coverage
@@ -21,11 +25,11 @@ This project includes 26 automated Cypress tests that validate the functionality
 
 3)Presence of:
 
-.Article cards with valid headlines, images, and links
+*Article cards with valid headlines, images, and links
 
-."Latest on Politics", "Analysis", and "Fuel Creativity Across Ontario" sections
+*"Latest on Politics", "Analysis", and "Fuel Creativity Across Ontario" sections
 
-4)unctional “Donate Today” button (opens support page in new tab)
+4)Functional “Donate Today” button (opens support page in new tab)
 
 5)Load More functionality for articles
 
