@@ -1,46 +1,63 @@
+
 # TVO Politics Test Suite
 
-This repo holds my Cypress tests for the Politics section of [TVO Today](https://www.tvo.org). 
+This repository contains Cypress end-to-end tests to validate the functionality of the Politics section on [TVO Today](https://www.tvo.org/).
 
 
-## Getting Started
-**1.Clone the repo and install dependencies**
+### 1. Clone the repository and install dependencies
 
-   git clone https://github.com/cs-surya/TvoPoliticsTest.git
-   
-   cd TvoPoliticsTest
-   
-   npm install
+```bash
+git clone https://github.com/cs-surya/TvoPoliticsTest.git
+cd TvoPoliticsTest
+npm install
+````
+### 2. Run the tests
 
-**2.Run the tests**
+To run all tests in headless mode:
 
+```bash
 npx cypress run
+```
+---
 
-Test Coverage
-This project includes 26 automated Cypress tests that validate the functionality of the Politics section on TVO Today. Covered areas:
+## Test Coverage
 
-1)Navigation to the Politics page via the Read menu
+This suite includes 26 automated tests that cover the following areas:
 
-2)Responsive layout on mobile devices (iPhone, Samsung, iPad)
+### Navigation
 
-3)Presence of:
+* Navigates to the Politics page via the "Read" menu
+* Returns to the home page when clicking the site logo
 
-*Article cards with valid headlines, images, and links
+### Responsiveness
 
-*"Latest on Politics", "Analysis", and "Fuel Creativity Across Ontario" sections
+* Validates navigation and layout on mobile viewports (iPhone 6/8/X, Samsung S10, iPad Mini)
 
-4)Functional “Donate Today” button (opens support page in new tab)
+### Content and Structure
 
-5)Load More functionality for articles
+* Presence of article cards with valid images, headlines, and links
+* Visibility of sections such as:
 
-6)Header and footer visibility
+  * "Latest on Politics"
+  * "Analysis"
+  * "Fuel Creativity Across Ontario"
+* Header and footer are consistently displayed
+* Includes descriptive subheading and a canonical link
 
-7)Unique article URLs and publication dates
+### Functionality
 
-8)Proper 404 handling for invalid articles
+* "Donate Today" button exists and opens a valid external page in a new tab
+* Articles load properly, and "Load More" fetches additional content
+* Unique article URLs are present
+* Publication dates are shown on articles
+* Search page is accessible and returns results for "politics"
 
-9)Search functionality and results
+### Error Handling
 
-10)Performance: Page loads within acceptable time limit
+* Visiting a non-existent article slug returns a proper 404 page
 
-These tests ensure the Politics section works as expected across screen sizes and core features are reliable.
+### Performance
+
+* Measures and asserts acceptable Politics page load times (under 8 seconds)
+
+
